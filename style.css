@@ -1,0 +1,400 @@
+@import url('https://fonts.googleapis.com/css2?family=Poopins:wght@300;400;500;600;700;800;900&display=swap');
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+ }
+
+ body{
+    background-color: #191919;
+    background-repeat: no-repeat;
+ }
+.header1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background: #191919;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    box-shadow: 1px 2px 3px #fff;
+}
+.logo{
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 20px;
+}
+.navbar a {
+font-size: 18px;
+color: white;
+text-decoration: none;
+font-weight: 500;
+margin-left: 30px ;
+margin-right: 25px;
+}
+.navbar a:hover,
+.navbar a:active{
+    color: aqua;
+}
+.home{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.home-content{
+    min-width: none;
+
+}
+.home-content img{
+    width: 39%;
+    border-top-left-radius:450px;
+    border-bottom-right-radius: 450px;
+    border-bottom-left-radius: 450px;
+    border-top-right-radius:450px ;
+    float: right;
+    margin-left: 700px;
+    position: absolute;
+    box-shadow: 1px 2px 5px aqua;
+}
+.home-content img:hover{
+    background-color: transparent;
+    border: 2px solid aqua;
+}
+.home-content h1 {
+    font-size: 56px;
+    font-weight: 700;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+    color: aqua;
+    letter-spacing: 3px;
+}
+.home-content h3 {
+    font-size: 50px;
+    font-weight: 700;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: aqua;
+    font-display: center;
+    letter-spacing: 3px;
+}
+.home-content h2 {
+    font-size: 32px;
+    font-weight: 700;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: aqua;
+    letter-spacing: 3px;
+}
+.home-content p{
+    font-size: large;
+    font-style: normal;
+    font-weight: 250;
+    color: white;
+    display: inline;
+    text-align: justify;
+    text-transform: capitalize;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.vivid-button {
+    background-color: #191919;
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    top: 75%;
+    left: 3%;
+    bottom: 18%;
+    box-shadow: 1px 2px 3px aqua;
+  }
+
+  .vivid-button:hover {
+    background-color: none;
+  }
+  .twitter-icon {
+    width: 40px;
+    height: 40px;
+    background-image: url('https://cdn-icons-png.flaticon.com/128/5969/5969020.png');
+    background-size: cover;
+    top: 75%;
+    left: 16%;
+    bottom: 15%;
+    position: absolute;
+    color: white;
+  }
+  .instagram-icon {
+    width: 40px;
+    height: 40px;
+    background-image: url('https://www.instagram.com/static/images/ico/favicon-192.png/68d99ba29cc8.png');
+    background-size: cover;
+    top: 75%;
+    left: 20%;
+    bottom: 15%;
+    position: absolute;
+  }
+  .facebook-icon {
+    width: 40px;
+    height: 40px;
+    background-image: url('https://en.facebookbrand.com/wp-content/uploads/2019/04/f_logo_RGB-Hex-Blue_512.png');
+    background-size: cover;
+    top: 75%;
+    left: 24%;
+    bottom: 15%;
+    position: absolute;
+  }
+  .github-icon {
+    width: 44px;
+    height: 44px;
+    background-image: url('https://cdn-icons-png.flaticon.com/128/1051/1051377.png');
+    background-size: cover;
+    top: 75%;
+    left: 28%;
+    bottom: 15%;
+    position: absolute;
+  }
+.about{
+    width: 100%;
+    padding: 100px 0px;
+    background-color: #191919;
+    border-radius: 5px;
+    box-shadow: 1px 2px 3px white;
+    justify-content: center;
+}
+.about img{
+    height: fit-content;
+    width: 430px;
+    margin-right: 100px;
+    margin-left: 50px;
+    border-radius:1000px;
+    box-shadow: 1px 2px 5px aqua;
+}
+.about img:hover{
+    background-color: transparent;
+    border: 2px solid aqua;
+}
+.about-text{
+    width: 550px;
+    
+}
+.main{
+    width: 80%;
+    max-width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.about-text h2{
+    color: white;
+    font-size: 75px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    text-shadow: 1px 2px 3px aqua;
+    text-align: justify;
+}
+.about-text h5{
+    color: white;
+    letter-spacing: 2px;
+    font-size: 22px;
+    margin-bottom: 25px;
+    text-transform: capitalize;
+}
+.about-text p{
+    color: #fcfcfc;
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 18px;
+    margin-bottom: 45px;
+}
+button{
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 13px 30px;
+    border-radius: 30px;
+    transition: .4s;
+}
+button:hover{
+    background-color: transparent;
+    border: 2px solid aqua;
+    cursor: pointer;
+}
+.inner{
+    padding-top: 20px;
+}
+.header{
+text-align: center;
+color: #fff;
+padding: 1rem;
+position: relative;
+text-shadow: 1px 2px 3px aqua
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items:center ;
+    text-align: center;
+    grid-gap: 1rem;
+    padding: 1rem 80px;
+    font-size: 1.2rem;
+}
+.skills{
+    border-radius: 5px;
+    box-shadow: 1px 2px 3px white;
+     
+}
+.skill-box {
+    border: 2px solid aqua;
+    padding: 1rem;
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 10px;
+    color: #ddd;
+    cursor:pointer;
+}
+    
+.skill-box:hover .img{
+    transform: translateY(-10px);
+}
+.skill-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+    margin-bottom:0.5rem ;
+    position: relative;
+}
+
+.img{
+    width: 90px;
+    height: 90px;
+    position: relative;
+    border-radius: 45px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+.img::after{
+    content:'' ;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:50% ;
+    height: 90px;
+    background: rgba(100, 100, 100, 0.5);
+    border-radius: 45px 0 0 45px;
+}
+.skill-title h3{
+  color: #fff;  
+  margin: 0.5rem;
+}
+.skill-icon{
+    width: 50px;
+    z-index:2 ;
+}
+@media screen and (max-width: 990px){
+    .container{
+        grid-template-columns: repeat(2, 1fr);
+        padding: 2rem 50px;
+    }
+}
+@media screen and (max-width: 650px){
+    .container{
+        grid-template-columns: 1fr;
+        padding: 2rem 50px;
+    }
+}
+.contacts {
+    max-width: 600px;
+    margin: 0 auto;
+    height: 50vh;
+}
+
+.contact-form {
+    padding: 50px 0;
+
+}
+
+form {
+    background-color: #2d7071;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+h2 {
+    text-align: center;
+    color: white;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #fff;
+    color: #fff;
+    margin-top: 10px;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-bottom: 2px solid aqua;
+}
+
+label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    pointer-events: none;
+    transition: 0.3s ease-out;
+}
+
+input:valid + label, textarea:valid + label {
+    top: -15px;
+    font-size: 15px;
+    color: white;
+}
+
+button {
+    background-color: #2e3739;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #495057;
+}
+ .footer {
+    text-align: center;
+    padding: 5px;
+    background-color: 191919;
+    color: white;
+    
+  }
