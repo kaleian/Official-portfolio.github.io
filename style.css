@@ -276,9 +276,11 @@ a:hover {
 
 .about-pic {
   border-radius: 2rem;
-
 }
-
+  .about-pic:hover{
+    background-color: transparent;
+    border: 2px solid aqua;
+}
 .arrow {
   position: absolute;
   right: -5rem;
