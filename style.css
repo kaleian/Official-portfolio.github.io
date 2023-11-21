@@ -481,10 +481,33 @@ button {
 button:hover {
     background-color: #495057;
 }
- .footer {
-    text-align: center;
-    padding: 5px;
-    background-color: 191919;
-    color: white;
-    
-  }
+.footer{
+  background-color: #495057;
+}
+
+.footer-container {
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  padding-top: 0.8rem;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 0.5rem;
+}
+.footer-container p{
+  color: white;
+}
+
+
+.social-media-icons {
+font-size: 24px;
+
+}
+.social-media-icons a{
+  margin-left: 15px;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+}
