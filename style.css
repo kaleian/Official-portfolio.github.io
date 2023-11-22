@@ -8,7 +8,6 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  
 }
 
 html {
@@ -31,12 +30,14 @@ a,
 nav,
 .nav-links {
   display: flex;
+  background-color: #495057;
 }
 
 nav {
   justify-content: space-around;
   align-items: center;
-  height: 17vh;
+  height: 12vh;
+  color: #fff;
 }
 
 .nav-links {
@@ -46,7 +47,7 @@ nav {
 }
 
 a {
-  color: black;
+  color: white;
   text-decoration: none;
   text-decoration-color: white;
 }
@@ -65,12 +66,14 @@ a:hover {
 .logo:hover {
   cursor: default;
 }
-.home{
+#home{
     height: 80vh;
     display: flex;
     justify-content: left;
     padding-left: 8rem;
     padding-top: 6rem;
+    border-bottom: #fff;
+    background-color: rgba(221, 251, 251, 0.443);
 }
 .home-content{
     min-width: none;
@@ -85,20 +88,20 @@ a:hover {
 }
 .home-content img:hover{
     background-color: transparent;
-    border: 2px solid aqua;
+    border: 2px solid rgba(45, 148, 64, 0.681);
 }
 .home-content h1 {
     font-size: 56px;
     font-weight: 700;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
-    color: rgb(38, 109, 109);
+    color: black;
     letter-spacing: 3px;
 }
 .home-content h3 {
     font-size: 50px;
     font-weight: 700;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: rgb(45, 66, 66);
+    color: rgb(57, 82, 82);
     font-display: center;
     letter-spacing: 3px;
 }
@@ -120,7 +123,7 @@ a:hover {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 .vivid-button {
-    background-color:rgb(45, 66, 66);
+    background-color:rgba(0, 0, 0, 0.859);
     color: white;
     padding: 10px 25px;
     border: none;
@@ -136,13 +139,16 @@ a:hover {
   .vivid-button:hover {
     background-color: none;
   }
-  
+  #about{
+     background-color: rgb(196, 223, 248);
+  }
 #about-section {
   padding-top: 4vh;
-  height: 96vh;
+  height: 100vh;
   margin: 0 10rem;
   box-sizing: border-box;
   min-height: fit-content;
+ 
 }
 
 .section-container {
@@ -231,7 +237,7 @@ a:hover {
 
 .btn-color-1,
 .btn-color-2:hover {
-  background: rgb(53, 53, 53);
+  background: rgba(0, 0, 0, 0.572);
   color: white;
 }
 
@@ -290,11 +296,15 @@ a:hover {
 .details-container {
   padding: 1.5rem;
   flex: 1;
-  background: white;
+  background-color: #3d3e3eb5;
   border-radius: 2rem;
   border: rgb(53, 53, 53) 0.1rem solid;
   border-color: rgb(163, 163, 163);
   text-align: center;
+  color: #fff;
+}
+.details-container p{
+  color: #fcfcfcc5;
 }
 
 .section-container {
@@ -349,9 +359,10 @@ position: relative;
     padding: 1rem 5px;
     font-size: 0.8rem;
 }
-.skills{
+#skills{
     border-radius: 5px;
-    height: 100vh;
+    height: 105vh;
+    background-color: rgba(221, 251, 251, 0.443);
 }
 .skill-box {
     border: 2px solid black;
@@ -360,11 +371,14 @@ position: relative;
     margin: 0 auto;
     text-align: center;
     border-radius: 10px;
-    color:black;
     cursor:pointer;
-}
-
+    background-color:rgba(196, 223, 248, 0.676);
     
+}
+.skill-box:hover {
+  transform: translateY(-5px);
+  scroll-behavior: smooth;
+}
 .skill-box:hover .img{
     transform: translateY(-10px);
 }
@@ -372,14 +386,15 @@ position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0.5rem;
-    margin-bottom:0.5rem ;
+    padding: 0.1rem;
+    margin-bottom:0.1rem ;
     position: relative;
 }
 
 .img{
-    width: 90px;
-    height: 90px;
+    width: 80px;
+    height: 80px;
+    background: transparent;
     position: relative;
     border-radius: 45px;
     display: flex;
@@ -392,6 +407,9 @@ position: relative;
 .skill-title h3{
   color: black;  
   margin: 0.5rem;
+}
+.skill-title p{
+  color: #fcfcfc;
 }
 .skill-icon{
     width: 55px;
@@ -412,16 +430,20 @@ position: relative;
 .contacts {
     max-width: 600px;
     margin: 0 auto;
-    height: 50vh;
+    padding-top: 9rem;
+    justify-content: center;
 }
 
 .contact-form {
-    padding: 50px 0;
-
+    align-items: center;
+    background-color: rgb(196, 223, 248);
+    text-align: center;
+    justify-content: center;
+    height: 100vh;
 }
 
 form {
-    background-color: rgb(38, 109, 109);
+    background-color: rgb(85, 85, 85);
     padding: 30px;
     border-radius: 10px;
 }
@@ -468,7 +490,7 @@ input:valid + label, textarea:valid + label {
 }
 
 button {
-    background-color: rgb(85, 85, 85);
+    background-color: rgba(0, 0, 0, 0.572);
     color: #fff;
     padding: 10px 20px;
     border: none;
