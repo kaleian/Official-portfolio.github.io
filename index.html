@@ -1,210 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ian Kale - Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <nav id="desktop-nav">
-      <div class="logo">KaleIan</div>
-      <div>
+    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="glass-nav">
+        <div class="logo">IK</div>
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">My skills</a></li>
-          <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
-      </div>
+        <div class="hamburger" id="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
     </nav>
-   </header>
-    <section id="home">
-        <div class="home-content">
-              <img src="pic.jpg">
-           <h1> Welcome</h1>
-           <h3>to my </h3>
-           <h1>Portfolio</h1>
-           <p>I’m a Software Engineer skilled in JavaScript, Python, React, SQL, and Django.<br> 
-            Check out my projects in Github.</p>
-       
-       <button class="vivid-button">Let’s Connect!</button>
-        </div> 
-    </div>    
-       </section>
-       <section id="about">
-        <div id="about-section">
-        <p class="section__text__p1">Get To Know More</p>
-        <h1 class="title">About Me</h1>
-        <div class="section-container">
-          <div class="section__pic-container">
-            <img
-              src="profile-pic.jpg"
-              alt="Profile picture"
-              class="about-pic"
-            />
-          </div>
-          <div class="about-details-container">
-            <div class="about-containers">
-              <div class="details-container">
-                <img
-                  src="experience.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <h3>Experience</h3>
-                <p>1+ years <br />Frontend Development</p>
-              </div>
-              <div class="details-container">
-                <img
-                  src="education.png"
-                  alt="Education icon"
-                  class="icon"
-                />
-                <h3>Education</h3>
-                <p>B.Sc. Bachelors Degree</p>
-              </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Turning Ideas Into<br><span>Digital Reality</span></h1>
+                <p class="hero-subtitle">Full Stack Developer & UI/UX Enthusiast</p>
+                <div class="hero-cta">
+                    <a href="#contact" class="cta-button">Let's Collaborate</a>
+                    <a href="#projects" class="cta-button secondary">View Projects</a>
+                </div>
             </div>
-            <div class="text-container">
-              <p>
-                I am a Front-end web developer. I can provide clean code and pixel perfect design.
-                I also make the website more and more interactive with web animations. A responsive design makes 
-                your website accesible to all user, regardless of their device.
-              </p>
+            <div class="hero-image">
+                <div class="image-frame">
+                    <img src="pic.jpg" alt="Ian Kale" class="profile-image">
+                    <div class="image-glow"></div>
+                </div>
             </div>
-          </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="profile-pic.jpg" alt="Ian Kale">
+                </div>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p class="lead">Passionate developer creating digital solutions that matter</p>
+                        <p>With 2+ years of experience in full-stack development, I specialize in building responsive web applications using modern technologies. My focus is on creating seamless user experiences combined with robust backend functionality.</p>
+                    </div>
+                    <div class="about-highlights">
+                        <div class="highlight-card">
+                            <i class="lni lni-code-alt"></i>
+                            <h4>10+ Projects</h4>
+                            <p>Across various industries</p>
+                        </div>
+                        <div class="highlight-card">
+                            <i class="lni lni-users"></i>
+                            <h4>Client Focus</h4>
+                            <p>100% satisfaction rate</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <img src="html.jpeg" alt="HTML">
+                    <h3>HTML5</h3>
+                </div>
+                <div class="skill-item">
+                    <img src="css.png" alt="CSS">
+                    <h3>CSS3</h3>
+                </div>
+                <div class="skill-item">
+                    <img src="javascript.png" alt="JavaScript">
+                    <h3>JavaScript</h3>
+                </div>
+                <div class="skill-item">
+                    <img src="python.png" alt="Python">
+                    <h3>Python</h3>
+                </div>
+                <div class="skill-item">
+                    <img src="react.jpg" alt="React">
+                    <h3>React</h3>
+                </div>
+                <div class="skill-item">
+                    <img src="sql.png" alt="SQL">
+                    <h3>MySQL</h3>
+                </div>
+                <div class="skill-item">
+                    <img src="php.png" alt="">
+                    <h3>PHP</h3>
+                </div>
+                <div class="skill-item">
+                    <img src="cplus.png" alt="C++">
+                    <h3>C++</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- Projects Carousel Section -->
+<section id="projects" class="section">
+    <div class="container">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="carousel-container">
+            <div class="carousel-track">
+                <!-- Project items -->
+                <div class="project-card">
+                    <img src="project1.jpg" alt="Project 1">
+                    <h3>E-Commerce Platform</h3>
+                    <p>React & Node.js</p>
+                </div>
+                <div class="project-card">
+                    <img src="project2.jpg" alt="Project 2">
+                    <h3>Phone Store App</h3>
+                    <p>MERN Stack</p>
+                </div>
+                <div class="project-card">
+                    <img src="project3.jpg" alt="Project 3">
+                    <h3>Thrift Shop</h3>
+                    <p>Vue & Firebase</p>
+                </div>
+                <!-- Duplicate items for infinite scroll -->
+                <div class="project-card">
+                    <img src="project1.jpg" alt="Project 1">
+                    <h3>E-Commerce Platform</h3>
+                    <p>React & Node.js</p>
+                </div>
+                <div class="project-card">
+                    <img src="project2.jpg" alt="Project 2">
+                    <h3>Phone Store App</h3>
+                    <p>MERN Stack</p>
+                </div>
+                <div class="project-card">
+                    <img src="project3.jpg" alt="Project 3">
+                    <h3>Thrift Shop</h3>
+                    <p>Vue & Firebase</p>
+                </div>
+            </div>
         </div>
     </div>
-      </section>
-      <section id="skills">
-        <div class="inner">
-         <div class="header">
-          <p class="section__text__p1">Take a peek at</p>
-             <h1>My Skills</h1>
-             </div>
-             <div class="container">
-               <div class="skill-box">
-                 <div class="skill-title">
-                     <div class="img">
-                         <img src="html.png" class="skill-icon">
-                         </div>
-                         <h3>HTML 5</h3>
-                         </div>
-                         <p> I’ve gained the ability to structure content on the web.
-                              I can now create and organize content on a webpage </p>
-                               </div>
-                               <div class="skill-box">
-                                 <div class="skill-title">
-                                     <div class="img">
-                                         <img src="css.jpg" class="skill-icon">
-                                         </div>
-                                         <h3>CSS</h3>
-                                         </div>
-                                         <p> I’ve gained the ability to style webpages. 
-                                             I can now control the layout, colors, and fonts of a 
-                                             webpage </p>
-                                               </div>
-                                               <div class="skill-box">
-                                                 <div class="skill-title">
-                                                     <div class="img">
-                                                         <img src="javascript.png"class="skill-icon">
-                                                         </div>
-                                                         <h3>JavaScript</h3>
-                                                         </div>
-                                                         <p>I’ve gained the ability to make webpages interactive. 
-                                                             I can now create dynamic content and user interactions 
-                                                             on a webpage.</p>
-                                                         </div>
-                                                               <div class="skill-box">
-                                                                 <div class="skill-title">
-                                                                     <div class="img">
-                                                                         <img src="python.jpg" class="skill-icon">
-                                                                         </div>
-                                                                         <h3>Python</h3>
-                                                                         </div>
-                                                                         <p> I’ve gained the ability to write scripts to automate tasks, 
-                                                                             build web applications, and analyze data.</p>
-                                                                               </div>
-                                                                               <div class="skill-box">
-                                                                                 <div class="skill-title">
-                                                                                     <div class="img">
-                                                                                         <img src="react.jpg" class="skill-icon">
-                                                                                         </div>
-                                                                                         <h3>React</h3>
-                                                                                         </div>
-                                                                                         <p> I’ve gained the ability to create reusable components and build 
-                                                                                             complex user interfaces efficiently. </p>
-                                                                                               </div>
-                                                                                               <div class="skill-box">
-                                                                                                 <div class="skill-title">
-                                                                                                     <div class="img">
-                                                                                                         <img src="sql.png" class="skill-icon">
-                                                                                                         </div>
-                                                                                                         <h3>MySQL</h3>
-                                                                                                         </div>
-                                                                                                         <p> I’ve gained the ability to manage databases.
-                                                                                                              I can now store, retrieve, and manipulate data 
-                                                                                                              in a structured way. </p>
-                                                                                                               </div>
-             </div>
-                                                                                                               <section id="contact">
-                                                                                                                <div class="contact-form">
-                                                                                                            <div class="contacts">
-                                                                                                                <form action="#" method="POST">
-                                                                                                                    <h2>Contact Me</h2>
-                                                                                                    
-                                                                                                                    <div class="form-group">
-                                                                                                                        <input type="text" name="name" id="name" required>
-                                                                                                                        <label for="name">Name</label>
-                                                                                                                    </div>
-                                                                                                    
-                                                                                                                    <div class="form-group">
-                                                                                                                        <input type="email" name="email" id="email" required>
-                                                                                                                        <label for="email">Email</label>
-                                                                                                                    </div>
-                                                                                                    
-                                                                                                                    <div class="form-group">
-                                                                                                                        <textarea name="message" id="message" required></textarea>
-                                                                                                                        <label for="message">Message</label>
-                                                                                                                    </div>
-                                                                                                    
-                                                                                                                    <button type="submit">Send Message</button>
-                                                                                                                </form>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                            </section>
-                                                                                                            <footer class="footer">
-                                                                                                              <div class="footer-container">
-                                                                                                                  <div class="social-media-icons">
-                                                                                                                      <a href="https://www.linkedin.com/in/ian kale/">
-                                                                                                                        <i class="lni lni-linkedin-original"></i>
+</section>
 
-                                                                                                                      </a>
-                                                                                                                      <a href="https://twitter.com/ian_kale/" >
-                                                                                                                        <i class="lni lni-twitter-original"></i>
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2 class="section-title">Let's Connect</h2>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <div class="info-card">
+                        <i class="lni lni-envelope"></i>
+                        <div class="info-content">
+                            <h4>Email</h4>
+                            <p>kaleian54@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <i class="lni lni-phone"></i>
+                        <div class="info-content">
+                            <h4>Phone</h4>
+                            <p>+254 727 377 52</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <i class="lni lni-map-marker"></i>
+                        <div class="info-content">
+                            <h4>Location</h4>
+                            <p>Nairobi, Kenya</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" required>
+                        <label for="name">Full Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" required>
+                        <label for="email">Email Address</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" required></textarea>
+                        <label for="message">Your Message</label>
+                    </div>
+                    <button type="submit" class="cta-button">Send Message <i class="lni lni-arrow-right"></i></button>
+                </form>
+            </div>
+        </div>
+    </section>
 
-                                                                                                                      </a>
-                                                                                                                      <a href="https://www.instagram.com/k.a.l.eee/">
-                                                                                                                        <i class="lni lni-instagram-original"></i>
-                                                                                                                      </a>
-                                                                                                                      <a href="https://www.github.com/kaleian/" >
-                                                                                                                        <i class="lni lni-github-original"></i>
-                                                                                                                      </a>
-                                                                                                                  </div>
-                                                                                                                  <div>
-                                                                                                                      <p>&#169;Copyright By Ian kale</p>
-                                                                                                                  </div>
-                                                                                                                  <div class="footer-text">
-                                                                                                                      <p class="text-sm">&copy; KaleIan 2025.  All Rights Reserved &trade; inc.</p>
-                                                                                                                  </div>
-                                                                                                              </div>
-                                                                                                          </footer>
-                                                                                                          
-                                                                                                        </body>
-                                                                                                    </html>                                                                                                  </section>
-    </body>
+        <!-- Enhanced Footer -->
+        <footer class="modern-footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-about">
+                        <h3>Ian Kale</h3>
+                        <p>Transforming ideas into exceptional digital experiences</p>
+                    </div>
+                    <div class="footer-links">
+                        <div class="link-column">
+                            <h4>Explore</h4>
+                            <ul>
+                                <li><a href="#home">Home</a></li>
+                                <li><a href="#projects">Projects</a></li>
+                                <li><a href="#about">About</a></li>
+                                <li><a href="#contact">Contact</a></li>
+                            </ul>
+                        </div>
+                        <div class="link-column">
+                            <h4>Connect</h4>
+                            <div class="social-links">
+                                <a href="#"><i class="lni lni-linkedin"></i></a>
+                                <a href="#"><i class="lni lni-github"></i></a>
+                                <a href="#"><i class="lni lni-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 Ian Kale. All rights reserved</p>
+                    <p>Designed with ❤️</p>
+                </div>
+            </div>
+        </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
