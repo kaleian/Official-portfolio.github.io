@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 
 const Contact: React.FC = () => {
   const [copied, setCopied] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
+  const [errorMessage, setErrorMessage] = useState<string>('');
 
   const copyEmail = () => {
     navigator.clipboard.writeText('kaleian54@gmail.com');
@@ -10,11 +11,40 @@ const Contact: React.FC = () => {
     setTimeout(() => setCopied(false), 2000);
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSubmitted(true);
-    (e.target as HTMLFormElement).reset();
-    setTimeout(() => setSubmitted(false), 5000);
+    setStatus('submitting');
+    setErrorMessage('');
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch('https://formspree.io/f/mbgjvgqj', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          Accept: 'application/json',
+        },
+      });
+
+      if (response.ok) {
+        setStatus('success');
+        form.reset();
+        setTimeout(() => setStatus('idle'), 6000);
+      } else {
+        const data = await response.json().catch(() => null);
+        if (data && Array.isArray(data.errors) && data.errors.length > 0) {
+          setErrorMessage(data.errors.map((err: { message: string }) => err.message).join(', '));
+        } else {
+          setErrorMessage('There was a problem submitting your message. Please try again or email directly.');
+        }
+        setStatus('error');
+      }
+    } catch {
+      setErrorMessage('Network error occurred. Please try again or contact kaleian54@gmail.com.');
+      setStatus('error');
+    }
   };
 
   return (
@@ -71,12 +101,17 @@ const Contact: React.FC = () => {
           </div>
 
           <div className="contact-form-card">
-            <form onSubmit={handleSubmit}>
+            <form 
+              action="https://formspree.io/f/mbgjvgqj" 
+              method="POST" 
+              onSubmit={handleSubmit}
+            >
               <div className="field-group">
                 <label className="field-label" htmlFor="user-name">Your Name</label>
                 <input
                   type="text"
                   id="user-name"
+                  name="name"
                   required
                   className="field-input"
                   placeholder="e.g. Alex Smith"
@@ -88,6 +123,7 @@ const Contact: React.FC = () => {
                 <input
                   type="email"
                   id="user-email"
+                  name="email"
                   required
                   className="field-input"
                   placeholder="e.g. alex@company.com"
@@ -98,20 +134,32 @@ const Contact: React.FC = () => {
                 <label className="field-label" htmlFor="user-msg">Message</label>
                 <textarea
                   id="user-msg"
+                  name="message"
                   required
                   className="field-input"
                   placeholder="What would you like to build or discuss?"
                 ></textarea>
               </div>
 
-              <button type="submit" className="btn btn-primary submit-btn">
-                Send Message
+              <button 
+                type="submit" 
+                className="btn btn-primary submit-btn"
+                disabled={status === 'submitting'}
+              >
+                {status === 'submitting' ? 'Sending...' : 'Send Message'}
               </button>
 
-              {submitted && (
+              {status === 'success' && (
                 <div className="msg-sent-alert">
                   <i className="lni lni-checkmark-circle"></i>
                   <span>Message sent! I'll get back to you shortly.</span>
+                </div>
+              )}
+
+              {status === 'error' && (
+                <div className="msg-error-alert">
+                  <i className="lni lni-warning"></i>
+                  <span>{errorMessage}</span>
                 </div>
               )}
             </form>

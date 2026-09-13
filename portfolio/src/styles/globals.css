@@ -1540,6 +1540,19 @@ textarea.field-input {
   gap: 0.5rem;
 }
 
+.msg-error-alert {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  border-radius: var(--radius-sm);
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #ef4444;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 /* --------------------------------------------------------------------------
    Footer: Minimal & Compact
    -------------------------------------------------------------------------- */
